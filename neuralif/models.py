@@ -521,7 +521,7 @@ class LearnedLU(nn.Module):
         
         # use a smooth activation function for the diagonal during training
         self.smooth_activation = kwargs.get("smooth_activation", True)
-        self.epsilon = 0.001
+        self.epsilon = kwargs.get("epsilon", 0.001)
         
         num_edge_features = 32
         hidden_size = 32
@@ -622,7 +622,7 @@ class LearnedLU(nn.Module):
         # appy activation function to lower part
         if torch.is_inference_mode_enabled():
             lower_values[diag_mask[lower_mask]] = step_activation(lower_values[diag_mask[lower_mask]], eps=self.epsilon)
-        if self.smooth_activation:
+        elif self.smooth_activation:
             lower_values[diag_mask[lower_mask]] = smooth_activation(lower_values[diag_mask[lower_mask]], eps=self.epsilon)
         
         # construct L and U matrix
