@@ -76,12 +76,6 @@ def test(model, test_loader, device, folder, save_results=False, dataset="random
             b = b / b_norm
             solution = data.s.to("cpu").to(torch.float64).squeeze() / b_norm if hasattr(data, "s") else None
             
-            # if we run single sample, create accurate solution (for testing purposes...)
-            # if solution is None and len(test_loader.dataset) == 1 and save_results:
-            #    print("Generate dummy solution...")
-            #    solution = torch.rand_like(b)
-            #    b = A@solution
-            
             overhead = (stop - start) - (p_time)
             
             # RUN CONJUGATE GRADIENT

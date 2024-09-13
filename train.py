@@ -244,11 +244,6 @@ def argparser():
     parser.add_argument("--regularizer", type=float, default=0)
     parser.add_argument("--scheduler", action='store_true', default=False)
     
-    # parser.add_argument("--training_samples", type=int, default=100)
-    # parser.add_argument("--optimizer", type=str, default="adam")
-    # parser.add_argument("--learning_rate", type=float, default=1e-3)
-    # parser.add_argument("--weight_decay", type=float, default=0)
-    
     # Model parameters
     parser.add_argument("--model", type=str, default="neuralif")
     
@@ -259,11 +254,6 @@ def argparser():
     parser.add_argument("--normalize_diag", action='store_true', default=False)
     parser.add_argument("--aggregate", nargs="*", type=str)
     parser.add_argument("--activation", type=str, default="relu")
-    
-    # parser.add_argument("--num_layers", type=int, default=2)
-    # parser.add_argument("--encoder_layer_norm", action='store_true', default=False)
-    # parser.add_argument("--mp_layer_norm", action='store_true', default=False)
-    # parser.add_argument("--k", type=int, default=1)
     
     # NIF parameters
     parser.add_argument("--skip_connections", action='store_true', default=True)
