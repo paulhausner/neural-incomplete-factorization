@@ -30,11 +30,13 @@ A synthetic dataset is provided in the folder `apps`.
 If our code helps your research or work, please consider citing our paper. The following are BibTeX references:
 
 ```
-@article{hausner2023neural,
+@article{hausner2024neural,
   title={Neural incomplete factorization: learning preconditioners for the conjugate gradient method},
-  author={H{\"a}usner, Paul and {\"O}ktem, Ozan and Sj{\"o}lund, Jens},
-  journal={arXiv preprint arXiv:2305.16368},
-  year={2023}
+  author={Paul H{\"a}usner and Ozan {\"O}ktem and Jens Sj{\"o}lund},
+  journal={Transactions on Machine Learning Research},
+  issn={2835-8856},
+  year={2024},
+  url={https://openreview.net/forum?id=FozLrZ3CI5}
 }
 
 @article{hausner2024learning,
